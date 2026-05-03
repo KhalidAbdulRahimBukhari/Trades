@@ -2,7 +2,7 @@
 // If you move the backend, only update BASE_URL.
 
 //const BASE_URL = 'http://localhost:8080/api/trades',  Only for local development
-const BASE_URL = 'trades-production-5169.up.railway.app', // For production deployment on Railway. Update if you deploy elsewhere.
+const BASE_URL = `${import.meta.env.VITE_API_URL}/trades`; // For production deployment on Railway. Update if you deploy elsewhere.
 
 export async function createTrade(tradeData) {
   const response = await fetch(BASE_URL, {
