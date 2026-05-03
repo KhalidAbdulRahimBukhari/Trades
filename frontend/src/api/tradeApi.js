@@ -1,7 +1,8 @@
 // All API calls live here. Backend is unchanged.
 // If you move the backend, only update BASE_URL.
 
-const BASE_URL = 'http://localhost:8080/api/trades'
+//const BASE_URL = 'http://localhost:8080/api/trades',  Only for local development
+const BASE_URL = 'trades-production-5169.up.railway.app', // For production deployment on Railway. Update if you deploy elsewhere.
 
 export async function createTrade(tradeData) {
   const response = await fetch(BASE_URL, {
